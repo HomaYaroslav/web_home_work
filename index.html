@@ -1,136 +1,220 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEB-програмування — Ярослав Гома</title>
 <style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+
+:root {
+  --batman-black: #0d0d0d;
+  --batman-blue: #1a3c6e;
+  --batman-lightblue: #4a90e2;
+  --batman-gray: #dcdcdc;
+  --batman-white: #ffffff;
 }
 
-td, th {
-  border: 1px solid #dddddd;
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--batman-black);
+  color: var(--batman-white);
+  margin: 0;
+  padding: 0;
+  background-image: url("https://images6.alphacoders.com/120/1206718.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+
+h1, h2, h3 {
+  color: var(--batman-lightblue);
+  text-align: center;
+  text-shadow: 0 0 10px rgba(74, 144, 226, 0.6);
+}
+
+
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid var(--batman-blue);
   text-align: left;
-  padding: 8px;
+  padding: 12px;
+  color: var(--batman-white);
+}
+
+th {
+  background-color: var(--batman-blue);
+  color: var(--batman-white);
+  text-transform: uppercase;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+tr:hover {
+  background-color: rgba(74, 144, 226, 0.2);
+  transition: 0.3s;
+}
+
+a {
+  color: var(--batman-lightblue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--batman-white);
+}
+
+.batman-photo {
+  width: 100%;
+  border-radius: 12px;
+  margin: 15px 0;
+  box-shadow: 0 0 15px rgba(74, 144, 226, 0.6);
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--batman-blue);
+  color: var(--batman-white);
+  margin-top: 30px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
 }
 </style>
 </head>
 <body>
 
-<h1>Технології web-програмування</h1>
+<div class="container">
+  <h1>Технології WEB-програмування</h1>
+  <h2>Студент: Гома Ярослав</h2>
 
-<h2>Студент: Гома Ярослав</h2>
+  <img src="https://images.squarespace-cdn.com/content/v1/5e338092dfdfe875b2e21666/7192c428-5613-4f54-bb99-002f92cac47e/batman.jpg" alt="Бетмен 2022" class="batman-photo">
 
-<h3>Модуль 0 — Основи систем керування верcіями (GitHub)</h3>
-<table>
-  <tr>
-    <th>Заняття</th>
-    <th>Тема</th>
-    <th></th>
-    
-  </tr>
-  <tr>
-    <td>Заняття 1</td>
-    <td>Вступ до контролю версій: що це таке і чому воно важливо.</td>
-    <td><a href="https://intita.com/modules/474"target="_blank">заннятя 1</a></td>
-  </tr>
-  <tr>
-    <td>Заняття 2</td>
-    <td>Основи Git</td>
-    <td><a href="https://intita.com/lesson/4690/#/part/8" target="_blank">заннятя 2 </a></td>
-  </tr>
-  <tr>
-    <td>Заняття 3</td>
-    <td>Робота з гілками</td>
-    <td><a href="https://intita.com/lesson/4691/#/part/6" target="_blank">заннятя 3</a></td>
-  </tr>
-  <tr>
-    <td>Заняття 4</td>
-    <td>Робота з комітами</td>
-    <td><a href="https://intita.com/lesson/4692/#/part/3" target="_blank">заннятя 4</a></td>
-  </tr>
-  <tr>
-    <td>Заняття 5</td>
-    <td>Робота з віддаленими репозиторіями</td>
-    <td><a href="https://intita.com/lesson/4693/#/part/5" target="_blank">заннятя 5</a></td>
-  </tr>
-  <tr>
-    <td>Заняття 6</td>
-    <td>Вирішення конфліктів</td>
-    <td><a href="https://intita.com/lesson/4694/#/part/3" target="_blank">заннятя 6</a></td>
-  </tr>
-</table>
+  <h3>Модуль 0 — Основи систем керування версіями (GitHub)</h3>
+  <table>
+    <tr>
+      <th>Заняття</th>
+      <th>Тема</th>
+      <th>Посилання</th>
+    </tr>
+    <tr>
+      <td>Заняття 1</td>
+      <td>Вступ до контролю версій: що це таке і чому воно важливо.</td>
+      <td><a href="https://intita.com/modules/474" target="_blank">Заняття 1</a></td>
+    </tr>
+    <tr>
+      <td>Заняття 2</td>
+      <td>Основи Git</td>
+      <td><a href="https://intita.com/lesson/4690/#/part/8" target="_blank">Заняття 2</a></td>
+    </tr>
+    <tr>
+      <td>Заняття 3</td>
+      <td>Робота з гілками</td>
+      <td><a href="https://intita.com/lesson/4691/#/part/6" target="_blank">Заняття 3</a></td>
+    </tr>
+    <tr>
+      <td>Заняття 4</td>
+      <td>Робота з комітами</td>
+      <td><a href="https://intita.com/lesson/4692/#/part/3" target="_blank">Заняття 4</a></td>
+    </tr>
+    <tr>
+      <td>Заняття 5</td>
+      <td>Робота з віддаленими репозиторіями</td>
+      <td><a href="https://intita.com/lesson/4693/#/part/5" target="_blank">Заняття 5</a></td>
+    </tr>
+    <tr>
+      <td>Заняття 6</td>
+      <td>Вирішення конфліктів</td>
+      <td><a href="https://intita.com/lesson/4694/#/part/3" target="_blank">Заняття 6</a></td>
+    </tr>
+  </table>
 
-<h3>Модуль 1 — HTML/CSS</h3>
-<table>
-  <tr>
-    <th>Тиждень</th>
-    <th>Тема</th>
-    <th>Посилання</th>
-  </tr>
-  <tr>
-    <td>Week 1</td>
-    <td>Як працює Інтернет, перша HTML-сторінка</td>
-    <td><a target="_blank" href="https://homayaroslav.github.io/web_home_work/home_work1">Моя сторінка</a></td>
-  </tr>
-  <tr>
-    <td>Week 2</td>
-    <td>Семантика HTML</td>
-    <td><a target="_blank" href="https://homayaroslav.github.io/web_home_work/home_work2">Моя сторінка 2</a></td>
-  </tr>
-  <tr>
-    <td>Week 3</td>
-    <td>Базовий CSS</td>
-    <td><a target="_blank" href="https://homayaroslav.github.io/web_home_work/home_work3">Моя сторінка 3</a></td>
-  </tr>
-  <tr>
-    <td>Week 4</td>
-    <td>Блокова модель, flexbox</td>
-    <td><a target="_blank" href="https://homayaroslav.github.io/web_home_work/home_work4">Моя сторінка 4</a></td>
-  </tr>
-  <tr>
-    <td>Week 5</td>
-    <td>Форми, таблиці, списки</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Week 6</td>
-    <td>Міні-проєкт + контроль</td>
-    <td></td>
-  </tr>
-</table>
+  <img src="https://cdn.flickeringmyth.com/wp-content/uploads/2022/04/the-batman.jpg" alt="Batman Poster" class="batman-photo">
 
-<h3>Модуль 2 — JavaScript (Front-end)</h3>
-<table>
-  <tr>
-    <th>Тиждень</th>
-    <th>Тема</th>
-    <th>Посилання</th>
-  </tr>
-  <tr>
-    <td>Week 1</td>
-    <td> - </td>
-    <td> - </td>
-  </tr>
-</table>
+  <h3>Модуль 1 — HTML/CSS</h3>
+  <table>
+    <tr>
+      <th>Тиждень</th>
+      <th>Тема</th>
+      <th>Посилання</th>
+    </tr>
+    <tr>
+      <td>Week 1</td>
+      <td>Як працює Інтернет, перша HTML-сторінка</td>
+      <td><a target="_blank" href="https://homayaroslav.github.io/web_home_work/home_work1">Моя сторінка</a></td>
+    </tr>
+    <tr>
+      <td>Week 2</td>
+      <td>Семантика HTML</td>
+      <td><a target="_blank" href="https://homayaroslav.github.io/web_home_work/home_work2">Моя сторінка 2</a></td>
+    </tr>
+    <tr>
+      <td>Week 3</td>
+      <td>Базовий CSS</td>
+      <td><a target="_blank" href="https://homayaroslav.github.io/web_home_work/home_work3">Моя сторінка 3</a></td>
+    </tr>
+    <tr>
+      <td>Week 4</td>
+      <td>Блокова модель, flexbox</td>
+      <td><a target="_blank" href="https://homayaroslav.github.io/web_home_work/home_work4">Моя сторінка 4</a></td>
+    </tr>
+  </table> 
 
-<h3>Модуль 3 — Node.js Backend</h3>
-<table>
-  <tr>
-    <th>Тиждень</th>
-    <th>Тема</th>
-    <th>Посилання</th>
-  </tr>
-  <tr>
-    <td>Week 1</td>
-    <td> - </td>
-    <td> - </td>
-  </tr>
-</table>
+  <img src="https://i.pinimg.com/originals/f2/08/5e/f2085e2efc3bbe365e8ffb0def25d25d.jpg" alt="Batman Action Scene" class="batman-photo">
+
+  <h3>Модуль 2 — JavaScript (Front-end)</h3>
+  <table>
+    <tr>
+      <th>Тиждень</th>
+      <th>Тема</th>
+      <th>Посилання</th>
+    </tr>
+    <tr>
+      <td>Week 1</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+  </table>
+
+  <h3>Модуль 3 — Node.js Backend</h3>
+  <table>
+    <tr>
+      <th>Тиждень</th>
+      <th>Тема</th>
+      <th>Посилання</th>
+    </tr>
+    <tr>
+      <td>Week 1</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+  </table>
+</div>
+
+<footer>
+  © 2025 Ярослав Гома — Batman Theme Edition 
+</footer>
 
 </body>
 </html>
