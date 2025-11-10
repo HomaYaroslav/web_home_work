@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя особиста сторінка</title>
+
+    <style>
+        /* Основні стилі сторінки */
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            color: #2b4c7e;
+        }
+
+        p {
+            color: rgb(50, 50, 80);
+            line-height: 1.6;
+        }
+
+        /* Заголовок */
+        header {
+            background-color: #2b4c7e;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        header img {
+            border-radius: 50%;
+            margin-top: 15px;
+            border: 3px solid white;
+        }
+
+        /* Контейнер для двох колонок */
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* щоб адаптувалось на маленьких екранах */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Ліва колонка (меню) */
+        .sidebar {
+            flex: 1 1 250px; /* мінімальна ширина 250px, росте при потребі */
+            background-color: #e0ebff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            text-align: center;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin: 10px 0;
+        }
+
+        .sidebar a {
+            color: #2b4c7e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Права колонка (основний текст) */
+        .main-content {
+            flex: 3 1 600px; /* більша частина простору */
+        }
+
+        .section-box {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #contacts {
+            background-color: #e0ebff;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #2b4c7e;
+            color: white;
+        }
+
+        td, th {
+            padding: 10px;
+            text-align: center;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+        }
+
+        form input[type="submit"] {
+            background-color: #2b4c7e;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #1f355b;
+        }
+
+        /* Нижній колонтитул */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2b4c7e;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* --- АДАПТИВНІСТЬ --- */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* колонки стають вертикально */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ярослав Гома</h1>
+        <img src="https://wallpapers.com/images/hd/optimus-prime-4k-lqemf01wvsysk6vm.jpg" alt="Оптимус Прайм" width="200">
+    </header>
+
+    <div class="container">
+        <!-- Ліва колонка -->
+        <aside class="sidebar">
+            <h2>Меню</h2>
+            <ul>
+                <li><a href="#about">Про мене</a></li>
+                <li><a href="#films">Улюблені фільми</a></li>
+                <li><a href="#socials">Соцмережі</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+        </aside>
+
+        <!-- Права колонка -->
+        <main class="main-content">
+            <section id="about" class="section-box">
+                <h2>Про мене</h2>
+                <p>Привіт! Мене звати Ярослав.</p>
+                <p>У вільний час я слухаю музику, дивлюся фільми та займаюся спортом.</p>
+            </section>
+
+            <section id="films" class="section-box">
+                <h2>Мої улюблені фільми</h2>
+                <ul>
+                    <li>Фільм: "Бійцівський клуб (1999)"</li>
+                    <li>Фільм: "Полонянки (2013)"</li>
+                </ul>
+            </section>
+
+            <section id="socials" class="section-box">
+                <h2>Мої соціальні мережі</h2>
+                <table>
+                    <tr>
+                        <th>Платформа</th>
+                        <th>Посилання</th>
+                    </tr>
+                    <tr>
+                        <td>Instagram</td>
+                        <td><a href="https://www.instagram.com/0yar_ikk0?igsh=MTV6NDJ4a2JxdzVyNQ==" target="_blank">instagram.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Facebook</td>
+                        <td><a href="https://www.facebook.com/share/19suGsGvzZ/" target="_blank">facebook.com</a></td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="contacts" class="section-box">
+                <h2>Зв’язатися зі мною</h2>
+                <form>
+                    <label>Ім’я:</label><br>
+                    <input type="text" name="name"><br><br>
+
+                    <label>Email:</label><br>
+                    <input type="email" name="email"><br><br>
+
+                    <label>Повідомлення:</label><br>
+                    <textarea name="message" rows="4"></textarea><br><br>
+
+                    <input type="submit" value="Надіслати">
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2025 Ярослав Гома. Усі права захищено.</p>
+    </footer>
+
+</body>
+</html>
