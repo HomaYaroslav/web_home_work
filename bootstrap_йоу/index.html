@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEB-програмування — Ярослав Гома</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<style>
+:root {
+  --batman-black: #0d0d0d;
+  --batman-blue: #1a3c6e;
+  --batman-lightblue: #4a90e2;
+  --batman-gray: #dcdcdc;
+  --batman-white: #ffffff;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--batman-black);
+  color: var(--batman-white);
+  margin: 0;
+  padding: 0;
+  background-image: url("https://images6.alphacoders.com/120/1206718.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--batman-lightblue);
+  text-shadow: 0 0 10px rgba(74, 144, 226, 0.6);
+}
+
+.navbar, footer {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(5px);
+}
+
+.navbar-brand, .nav-link {
+  color: var(--batman-lightblue) !important;
+  font-weight: bold;
+}
+.nav-link:hover {
+  color: var(--batman-white) !important;
+}
+
+.carousel-item img {
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(74, 144, 226, 0.6);
+}
+
+.accordion-button {
+  background-color: var(--batman-blue);
+  color: var(--batman-white);
+}
+.accordion-body {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--batman-white);
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 1px solid var(--batman-blue);
+  color: var(--batman-white);
+  box-shadow: 0 0 15px rgba(74, 144, 226, 0.4);
+}
+
+.card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+form label {
+  color: var(--batman-lightblue);
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--batman-white);
+  border: 1px solid var(--batman-blue);
+}
+
+button.send-btn {
+  background-color: var(--batman-blue);
+  border: none;
+  color: var(--batman-white);
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 18px;
+  margin-top: 10px;
+  box-shadow: 0 0 15px rgba(74, 144, 226, 0.7);
+}
+button.send-btn:hover {
+  background-color: var(--batman-lightblue);
+  color: black;
+}
+</style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#carouselExampleAutoplaying">Carousel</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#accordionFlushExample">Accordion</a>
+                </li>
+                 <li class="nav-item">
+                <a class="nav-link" href="#cardsBlock">Cards</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner text-center">
+        <div class="carousel-item active">
+            <img src="https://image.tmdb.org/t/p/w780/IYUD7rAIXzBM91TT3Z5fILUS7n.jpg" class="d-block mx-auto" height="500">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.pinimg.com/originals/f2/08/5e/f2085e2efc3bbe365e8ffb0def25d25d.jpg" class="d-block mx-auto" height="500">
+        </div>
+        <div class="carousel-item">
+            <img src="https://lastmovieoutpost.com/wp-content/uploads/2024/09/The-Batman.jpg" class="d-block mx-auto" height="500">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<div class="accordion accordion-flush mt-5" id="accordionFlushExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+            Факти про Бетмена
+        </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse">
+            <div class="accordion-body">Загатковий мужик, розумний, стриманий.</div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+            Діяльність Бетмена
+        </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse">
+            <div class="accordion-body">Детектив, борець зі злочинністю.</div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree">
+            Інші факти про Бетмена
+        </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse">
+            <div class="accordion-body">Його батьків убили, що мотивувало його боротися зі злочинністю.</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container text-center mt-5" id="cardsBlock">
+
+    <div class="row align-items-center">
+        <div class="col">
+            <div class="card"><img src="https://image.tmdb.org/t/p/original/ftkY1xIQ6ianSVp3EDufPVPLwa2.jpg" class="card-img-top"><div class="card-body"><p>Головний друг/ворог Бетмена це Джокер</p></div></div>
+        </div>
+        <div class="col">
+            <div class="card"><img src="https://static.theclinic.cl/media/2021/05/Joker-768x512.jpg" class="card-img-top"><div class="card-body"><p>Джокер дуже глибокий та прописаний персонаж.</p></div></div>
+        </div>
+        <div class="col">
+            <div class="card"><img src="https://i.pinimg.com/originals/c6/0d/44/c60d443dbc9ec8288887d8a2111866c8.jpg" class="card-img-top"><div class="card-body"><p>Інший дуже важливий персонаж у світі Бетмена.</p></div></div>
+        </div>
+    </div>
+
+    <div class="row align-items-center mt-4">
+        <div class="col">
+            <div class="card"><img src="..." class="card-img-top"><div class="card-body"><p>Some text...</p></div></div>
+        </div>
+        <div class="col">
+            <div class="card"><img src="..." class="card-img-top"><div class="card-body"><p>Some text...</p></div></div>
+        </div>
+        <div class="col">
+            <div class="card"><img src="..." class="card-img-top"><div class="card-body"><p>Some text...</p></div></div>
+        </div>
+    </div>
+
+    <form class="mt-4" onsubmit="sendEmail(); return false;">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+
+        <label class="form-label mt-3">Повідомлення</label>
+        <textarea class="form-control" id="textInput" rows="3"></textarea>
+
+        <button class="send-btn" type="submit">Відправити email</button>
+    </form>
+</div>
+
+</main>
+
+<footer class="text-center mt-5 p-3">
+    © 2025 — Batman Edition
+</footer>
+
+<script>
+function sendEmail() {
+    const email = document.getElementById("emailInput").value;
+    const text = document.getElementById("textInput").value;
+
+    window.location.href = `mailto:${email}?subject=Message from Batman Site&body=${encodeURIComponent(text)}`;
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
