@@ -1,4 +1,4 @@
-/* Основні кольори */
+
 :root {
     --ml-black: #02030a;
     --ml-blue: #0a3cff;
@@ -8,7 +8,7 @@
     --ml-red: #ff4d4d;
 }
 
-/* Базові стилі сторінки */
+
 body {
     font-family: 'Poppins', sans-serif;
     background: radial-gradient(circle at center, #071735 0%, #02030a 70%);
@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5 {
     text-shadow: 0 0 8px rgba(255,211,107,0.9), 0 0 15px rgba(0, 61, 255,0.6), 0 0 20px rgba(255,0,0,0.3);
 }
 
-/* Header */
+
 header {
     background: linear-gradient(90deg, #01030a, #051331);
     padding: 20px 0;
@@ -32,7 +32,7 @@ header {
     box-shadow: 0 0 15px rgba(0, 60, 255, 0.7);
 }
 
-/* Footer */
+
 footer {
     background: #01030a;
     color: var(--ml-gold);
@@ -41,7 +41,7 @@ footer {
     box-shadow: inset 0 0 15px rgba(255, 211, 107, 0.3);
 }
 
-/* Навігація */
+
 .navbar {
     background: linear-gradient(90deg, #01030a, #051331);
     border-bottom: 2px solid var(--ml-blue);
@@ -58,7 +58,7 @@ footer {
     text-shadow: 0 0 8px var(--ml-blue), 0 0 15px var(--ml-gold);
 }
 
-/* Карточки */
+
 .card {
     background: rgba(0, 0, 0, 0.85);
     border: 2px solid var(--ml-blue);
@@ -89,7 +89,7 @@ footer {
     border-bottom: 2px solid var(--ml-blue);
 }
 
-/* Секції */
+
 .section-split .half {
     background: rgba(0,0,0,0.55);
     padding: 25px;
@@ -98,7 +98,7 @@ footer {
     box-shadow: inset 0 0 20px rgba(0,59,255,0.3), 0 0 15px rgba(255,0,0,0.2);
 }
 
-/* Списки з неоновим ефектом */
+
 ul {
     list-style-type: disc;
     padding-left: 25px;
@@ -110,7 +110,7 @@ ul li {
     text-shadow: 0 0 6px var(--ml-blue), 0 0 10px var(--ml-gold);
 }
 
-/* Таблиця з підсвічуванням */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -129,7 +129,7 @@ th {
     color: var(--ml-white);
 }
 
-/* Форма */
+
 form {
     background: rgba(0, 0, 0, 0.8);
     padding: 25px;
@@ -170,7 +170,7 @@ button.send-btn:hover {
     text-shadow: 0 0 10px var(--ml-gold);
 }
 
-/* Accordion */
+
 .accordion-button {
     background: #01030a;
     border-bottom: 1px solid var(--ml-blue);
@@ -181,7 +181,7 @@ button.send-btn:hover {
     background: rgba(26, 43, 196, 0.308);
 }
 
-/* Carousel caption */
+
 .carousel-caption {
     background: rgba(0,0,0,0.7);
     padding: 15px;
@@ -190,7 +190,7 @@ button.send-btn:hover {
     text-shadow: 0 0 10px black, 0 0 15px var(--ml-blue);
 }
 
-/* Flexbox для навігації та секцій */
+
 .navbar-nav {
     display: flex;
     flex-direction: row;
@@ -205,7 +205,7 @@ button.send-btn:hover {
     gap: 20px;
 }
 
-/* Адаптивність */
+
 @media screen and (max-width: 768px) {
     .section-split {
         flex-direction: column;
