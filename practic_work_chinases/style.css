@@ -1,0 +1,226 @@
+/* Основні кольори */
+:root {
+    --ml-black: #02030a;
+    --ml-blue: #0a3cff;
+    --ml-gold: #ffd36b;
+    --ml-white: #ffffff;
+    --ml-purple: #9b59b6;
+    --ml-red: #ff4d4d;
+}
+
+/* Базові стилі сторінки */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #071735 0%, #02030a 70%);
+    color: var(--ml-white);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--ml-gold);
+    text-shadow: 0 0 8px rgba(255,211,107,0.9), 0 0 15px rgba(0, 61, 255,0.6), 0 0 20px rgba(255,0,0,0.3);
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #01030a, #051331);
+    padding: 20px 0;
+    color: var(--ml-gold);
+    box-shadow: 0 0 15px rgba(0, 60, 255, 0.7);
+}
+
+/* Footer */
+footer {
+    background: #01030a;
+    color: var(--ml-gold);
+    padding: 25px 0;
+    font-size: 14px;
+    box-shadow: inset 0 0 15px rgba(255, 211, 107, 0.3);
+}
+
+/* Навігація */
+.navbar {
+    background: linear-gradient(90deg, #01030a, #051331);
+    border-bottom: 2px solid var(--ml-blue);
+    box-shadow: 0 0 10px rgba(0, 61, 255, 0.7);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--ml-gold) !important;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: var(--ml-blue) !important;
+    text-shadow: 0 0 8px var(--ml-blue), 0 0 15px var(--ml-gold);
+}
+
+/* Карточки */
+.card {
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid var(--ml-blue);
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(0, 64, 255, 0.9), 0 0 40px rgba(255, 211, 107, 0.5);
+    transition: 0.3s;
+}
+
+.card-title {
+    color: var(--ml-gold);
+    text-shadow: 0 0 10px var(--ml-gold), 0 0 20px var(--ml-blue);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 35px rgba(11, 11, 136, 0.8), 0 0 25px rgba(255,0,0,0.5);
+}
+
+.card-body p {
+    color: white;
+}
+
+.card img, .carousel-item img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 2px solid var(--ml-blue);
+}
+
+/* Секції */
+.section-split .half {
+    background: rgba(0,0,0,0.55);
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,211,107,0.5);
+    box-shadow: inset 0 0 20px rgba(0,59,255,0.3), 0 0 15px rgba(255,0,0,0.2);
+}
+
+/* Списки з неоновим ефектом */
+ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    text-shadow: 0 0 6px var(--ml-blue), 0 0 10px var(--ml-gold);
+}
+
+/* Таблиця з підсвічуванням */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid var(--ml-gold);
+    padding: 8px;
+    text-align: center;
+    color: var(--ml-white);
+}
+
+th {
+    background: linear-gradient(to right, var(--ml-blue), var(--ml-purple));
+    color: var(--ml-white);
+}
+
+/* Форма */
+form {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--ml-gold);
+    box-shadow: 0 0 15px rgba(255, 211, 107, 0.5);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--ml-blue);
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+button.send-btn {
+    background: linear-gradient(90deg, var(--ml-blue), var(--ml-purple));
+    padding: 14px 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0,59,255,0.9), 0 0 25px rgba(255, 211, 107, 0.7);
+}
+
+button.send-btn:hover {
+    background: linear-gradient(90deg, var(--ml-gold), var(--ml-red));
+    color: black;
+    text-shadow: 0 0 10px var(--ml-gold);
+}
+
+/* Accordion */
+.accordion-button {
+    background: #01030a;
+    border-bottom: 1px solid var(--ml-blue);
+    color: var(--ml-white);
+}
+
+.accordion-body {
+    background: rgba(26, 43, 196, 0.308);
+}
+
+/* Carousel caption */
+.carousel-caption {
+    background: rgba(0,0,0,0.7);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid var(--ml-gold);
+    text-shadow: 0 0 10px black, 0 0 15px var(--ml-blue);
+}
+
+/* Flexbox для навігації та секцій */
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.section-split {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Адаптивність */
+@media screen and (max-width: 768px) {
+    .section-split {
+        flex-direction: column;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-size: 1.1rem;
+    }
+
+    .card img, .carousel-item img {
+        height: 250px;
+    }
+}
