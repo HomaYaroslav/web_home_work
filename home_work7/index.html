@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Бюджет</title>
+</head>
+<style>
+        :root {
+            --batman-black: #0d0d0d;
+            --batman-blue: #1a3c6e;
+            --batman-lightblue: #4a90e2;
+            --batman-gray: #dcdcdc;
+            --batman-white: #ffffff;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: var(--batman-black);
+            color: var(--batman-white);
+            margin: 0;
+            padding: 0;
+            background-image: url("https://images6.alphacoders.com/120/1206718.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            color: var(--batman-lightblue);
+            text-align: center;
+            text-shadow: 0 0 10px rgba(74, 144, 226, 0.6);
+            margin-top: 30px;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .result-box {
+            padding: 15px;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid var(--batman-lightblue);
+            border-radius: 8px;
+            font-size: 18px;
+        }
+    </style>
+<body>
+    <h1>Розрахунок бюджету</h1>
+
+    <p>Відкрийте консоль браузера (F12 → Console), щоб побачити результат.</p>
+
+    
+    <script src="budget.js"></script>
+</body>
+</html>
+
