@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Таблиця множення 1–10</title>
+
+    <style>
+        :root {
+            --batman-black: #0d0d0d;
+            --batman-blue: #1a3c6e;
+            --batman-lightblue: #4a90e2;
+            --batman-gray: #dcdcdc;
+            --batman-white: #ffffff;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: var(--batman-black);
+            color: var(--batman-white);
+            margin: 0;
+            padding: 0;
+            background-image: url("https://i.pinimg.com/originals/d6/6d/ce/d66dce2a4927dbd562ac8168cf8787e0.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            color: var(--batman-lightblue);
+            text-align: center;
+            text-shadow: 0 0 10px rgba(74, 144, 226, 0.6);
+            margin-top: 30px;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Таблиця множення 1–10</h1>
+
+    <div class="container">
+        <p>
+            Відкрий <b>Console (F12)</b><br>
+            Таблиця виводиться з табуляцією
+        </p>
+    </div>
+
+    <script> 
+        let showAgain = true;
+
+        while (showAgain) {
+            console.clear();
+            console.log("ТАБЛИЦЯ МНОЖЕННЯ 1–10\n");
+
+            for (let i = 1; i <= 10; i++) {
+                let row = "";
+                for (let j = 1; j <= 10; j++) {
+                    row += (i * j) + "\t";
+                }
+                console.log(row);
+            }
+
+            showAgain = confirm("Показати таблицю множення ще раз?");
+        }
+    </script>
+
+</body>
+</html>
+
+   
+
+
