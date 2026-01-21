@@ -8,7 +8,7 @@ function calculator() {
             continue; 
         }
 
-        let num2 = prompt("Enter first numder:");
+        let num2 = prompt("Enter second numder:");
         if (num2 === null) break; 
         num2 = Number(num2);
         if (isNaN(num2)) {
