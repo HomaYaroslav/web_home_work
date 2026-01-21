@@ -1,40 +1,52 @@
-function culculator() {
-    let num1 = prompt("Enter pershe chislo");
-    let num2 = prompt("Enter druge chislo");
-    let op = prompt("Enter +, -, *, /");
-    let result;
-    let output = document.getElementById("output");
+function calculator() {
+    while (true) {
+        let num1 = prompt("Enter first numder:");
+        if (num1 === null) break; 
+        num1 = Number(num1);
+        if (isNaN(num1)) {
+            alert("It's not NUMBER! TRY AGAIN.");
+            continue; 
+        }
 
-    switch (op) {
-        case "+":
-            result = num1 + num2;
-            break;
+        let num2 = prompt("Enter first numder:");
+        if (num2 === null) break; 
+        num2 = Number(num2);
+        if (isNaN(num2)) {
+            alert("It's not NUMBER! TRY AGAIN.");
+            continue;
+        }
 
-        case "-":
-            result = num1 - num2;
-            break;
+        let op = prompt("Enter op: +, -, *, /");
+        if (op === null) break; 
 
-        case "*":
-            result = num1 * num2;
-            break;
+        let result;
 
-        case "/":
-            if (num2 === 0) {
-                output.innerHTML = "На нуль ділити не можна";
-                return;
-            }
-            result = num1 / num2;
-            break;
+        switch (op) {
+            case "+":
+                result = num1 + num2;
+                break;
+            case "-":
+                result = num1 - num2;
+                break;
+            case "*":
+                result = num1 * num2;
+                break;
+            case "/":
+                if (num2 === 0) {
+                    alert("You can't divide by zero!");
+                    continue; 
+                }
+                result = num1 / num2;
+                break;
+            default:
+                alert("Unknown operator!");
+                continue; 
+        }
 
-        default:
-            output.innerHTML = "Невідомий оператор";
-            return;
+        alert(`Result: ${result}`);
     }
 
-    output.innerHTML = `Result: ${result}`;
+    alert("The calculator has finished. See you!");
 }
-    window.onload = function () {
-    culculator();
-};
 
-culculator();
+calculator();
