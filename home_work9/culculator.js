@@ -1,24 +1,40 @@
 function culculator() {
-    let num1 = Number (prompt("enter pershe chislo"));
-    let num2 = Number (prompt("enter druge chislo"));
-    let op = (prompt("enter +, -, *, /"));
+    let num1 = prompt("Enter pershe chislo");
+    let num2 = prompt("Enter druge chislo");
+    let op = prompt("Enter +, -, *, /");
     let result;
-    if (op === "+"){
-        result = num1 + num2 
+    let output = document.getElementById("output");
+
+    switch (op) {
+        case "+":
+            result = num1 + num2;
+            break;
+
+        case "-":
+            result = num1 - num2;
+            break;
+
+        case "*":
+            result = num1 * num2;
+            break;
+
+        case "/":
+            if (num2 === 0) {
+                output.innerHTML = "На нуль ділити не можна";
+                return;
+            }
+            result = num1 / num2;
+            break;
+
+        default:
+            output.innerHTML = "Невідомий оператор";
+            return;
     }
-    else if (op === "-"){
-        result = num1 - num2 
-    }
-    else if (op === "*"){
-        result = num1 * num2 
-    }
-    else if (op === "/"){
-        result = num1 / num2
-    }
-    else {
-        alert ("Error nevidomiy");
-        return;
-    }
-    alert("Result: " + result);
+
+    output.innerHTML = `Result: ${result}`;
 }
+    window.onload = function () {
+    culculator();
+};
+
 culculator();
