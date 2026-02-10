@@ -1,0 +1,78 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #0b0f14; 
+  color: #eaeaea;
+}
+
+h1 {
+  text-align: center;
+  color: #f5c518;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(245, 197, 24, 0.6);
+}
+
+#taskInput {
+  padding: 10px;
+  width: 220px;
+  background: #111827;
+  border: 2px solid #f5c518;
+  border-radius: 6px;
+  color: #fff;
+  outline: none;
+}
+
+#taskInput::placeholder {
+  color: #9ca3af;
+}
+
+#addBtn {
+  padding: 10px 14px;
+  margin-left: 10px;
+  background: #f5c518;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#addBtn:hover {
+  background: #ffd84d;
+  box-shadow: 0 0 10px rgba(245, 197, 24, 0.8);
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  background: #111827;
+  border-left: 4px solid #f5c518;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+#taskList button {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#taskList button:hover {
+  background: #ff3b3b;
+  box-shadow: 0 0 8px rgba(255, 59, 59, 0.7);
+}
