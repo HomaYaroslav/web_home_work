@@ -19,8 +19,8 @@ let activeFilter = "all";
 // 2) ЕЛЕМЕНТИ СТОРІНКИ (DOM)
 // TODO 1: Отримайте елементи за їх id через document.getElementById("id"). Один приклад нижче.
 const balanceValue = document.getElementById("balanceValue");
-const depositInput = document.getElementById("depositInput");   // getElementById("depositInput")
-const withdrawInput = document.getElementById("withdrawInput") ;
+const depositInput = document.getElementById("depositInput");
+const withdrawInput = document.getElementById("withdrawInput");
 const depositBtn = document.getElementById("depositBtn");
 const withdrawBtn = document.getElementById("withdrawBtn");
 const transactionsList = document.getElementById("transactionsList");
@@ -29,17 +29,16 @@ const errorText = document.getElementById("errorText");
 const clearBtn = document.getElementById("clearBtn");
 const totalInValue = document.getElementById("totalInValue");
 const totalOutValue = document.getElementById("totalOutValue");
-const filterAllBtn = document.getElementById("filterAllBtn");
-const filterInBtn = document.getElementById("filterInBtn");
-const filterOutBtn = document.getElementById("filterOutBtn");
+const filterAllBtn = document.getElementById("filterAll");
+const filterInBtn = document.getElementById("filterIn");
+const filterOutBtn = document.getElementById("filterOut");
 
 
 // 3) ДОПОМІЖНІ ФУНКЦІЇ
 // TODO 2 — showError(text): встановити текст помилки в елемент errorText (textContent).
 function showError(text) {
     if (!errorText) return;
-    errorText.textContent = text
-    // Допишіть: errorText.textContent = ...
+    errorText.textContent = text;
 }
 
 // Форматуємо число як гроші з 2 знаками після коми
@@ -63,16 +62,14 @@ function readAmount(inputEl) {
 
 // TODO 3 — makeId(): повернути унікальний id (наприклад String(Date.now())).
 function makeId() {
-    return String(Date.show());
-    // Допишіть: return ...
+    return String(Date.now());
 }
 
 
 // 4) localStorage
 // TODO 4 — save(): зберегти account у localStorage під ключем "account".
 function save() {
-    localStorage.setItem("account", JSON.stringify(account))
-    // Допишіть: localStorage.setItem...
+    localStorage.setItem("account", JSON.stringify(account));
 }
 
 // Завантажити account з localStorage
@@ -101,9 +98,8 @@ function calcTotals() {
     let totalOut = 0;
     account.transactions.forEach(t => {
         const amount = Number(t.amount) || 0;
-        if (t.type === "deposit") totalIn += amount
-        if (t.type === "withdraw") totalOut += amount
-        // Допишіть 2 перевірки: if ( ... ) total... += ...;
+        if (t.type === "deposit") totalIn += amount;
+        if (t.type === "withdraw") totalOut += amount;
     });
     return {
         totalIn: Math.round(totalIn * 100) / 100,
@@ -117,8 +113,8 @@ function renderTotals() {
     const totals = calcTotals();
     if (totalInValue) totalInValue.textContent = formatMoney(totals.totalIn);
     if (totalOutValue) totalOutValue.textContent = formatMoney(totals.totalOut);
-    // Допишіть: аналогічно для totalOutValue та totals.totalOut
 }
+
 
 
 // 6) ФІЛЬТРИ (модуль: умови, масиви — метод filter)
@@ -127,8 +123,6 @@ function renderTotals() {
 // 2) інакше повернути результат filter (за типом t.type === activeFilter).
 function getVisibleTransactions() {
     if (activeFilter === "all") return account.transactions;
-    // Допишіть умову по які мають повертатись усі транзакції: if ( ... ) return account.transactions;
-    
     return account.transactions.filter(t => t.type === activeFilter);
 }
 
@@ -220,7 +214,6 @@ function render() {
         transactionsList.innerHTML = "";
         visible.forEach(t => {
             transactionsList.appendChild(createTransactionItem(t));
-            // Допишіть: transactionsList.appendChild( використайте функцію для створення елементу транзакції);
         });
     }
 
@@ -246,9 +239,8 @@ function addTransaction(type, amount) {
 
     // Оновлюємо баланс
     if (type === "deposit") account.balance += amount;
-    if (type === "deposit") account.balance -= amount;
     // Допишіть: аналогічно для withdraw
-    
+    if (type === "withdraw") account.balance -= amount;
 
     // Зберігаємо і оновлюємо інтерфейс
     save();
@@ -264,8 +256,7 @@ if (depositBtn) {
 
         const amount = readAmount(depositInput);
         if (amount === null) {
-            showError("Enter a valid amount greater than 0")
-            // Допишіть: функцію повернення помилки з текстом "Enter a valid amount greater than 0"
+            showError("Enter a valid amount greater than 0");
             return;
         }
 
@@ -281,13 +272,11 @@ if (withdrawBtn) {
         const amount = readAmount(withdrawInput);
         if (amount === null) {
             showError("Enter a valid amount greater than 0");
-            // Допишіть: функцію повернення помилки з текстом "Enter a valid amount greater than 0"
             return;
         }
 
         if (amount > account.balance) {
             showError("Not enough balance");
-            // Допишіть: функцію повернення помилки з текстом "Not enough balance"
             return;
         }
 
@@ -318,4 +307,4 @@ if (filterOutBtn) filterOutBtn.addEventListener("click", () => setFilter("withdr
 // TODO 14 — допишіть виклики функцій
 load();
 setFilter("all");
-render();
+
